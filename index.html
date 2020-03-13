@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <link rel="stylesheet" href="stylesheet.css">
 <body>
     
 <h2>Which one of the following plants is a herb?</h2>
-<p>Thats right!</p>
-<button id="pa" onclick="gjore()">Parsley</button>
-<button id="sa" onclick="gjore()">Sage</button>
-<button id="ro" onclick="gjore()">Rosemary</button>
-<button id="th" onclick="gjore()">Thyme</button>
-
+<p id='PPP'>Thats right!</p>
+<button id="pa" onclick="gjore(this)">Parsley</button>
+<button id="sa" onclick="gjore(this)">Sage</button>
+<button id="ro" onclick="gjore(this)">Rosemary</button>
+<button id="th" onclick="gjore(this)">Thyme</button>
+<h4 id='all'>Yes they all are, and yes its from a song :)</h4>
 <script>
-function gjore() {
-    document.getElementById('pa').innerHTML = 'X';
-
+function gjore(trykket) {
+    trykket.innerHTML = 'X',
+    document.getElementById('PPP').style.display="block";
+    
+    if (document.getElementById('pa').innerHTML=='X'
+   && document.getElementById('sa').innerHTML=='X' 
+   && document.getElementById('ro').innerHTML=='X' 
+   && document.getElementById('th').innerHTML=='X') {
+    document.getElementById('all').style.display="block";
+   }
 }
 
 

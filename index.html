@@ -2,14 +2,27 @@
 <html lang="en">
     <link rel="stylesheet" href="stylesheet.css">
 <body>
-    
-<h2>Which one of the following plants is a herb?</h2>
-<p id='PPP'>Thats right!</p>
+ 
+<div class='first'><h3>Which one of the following plants is a herb?</h3></div>
+<br>
+<img class='first' src="Parsley.jpg">
+<img class='first' src="Sage.jpg">
+<img class='first' src="Rosemary.jpg">
+<img class='first' src="Thyme.jpg">
+<br><br><br><br><br><br><br>
+
 <button id="pa" onclick="gjore(this)">Parsley</button>
 <button id="sa" onclick="gjore(this)">Sage</button>
 <button id="ro" onclick="gjore(this)">Rosemary</button>
 <button id="th" onclick="gjore(this)">Thyme</button>
-<h4 id='all'>Yes they all are, and yes its from a song :)</h4>
+<div class='second'>
+<p id='PPP'>Correct!</p>
+<h4 id='all'>They all are indeed, and from a song it is :)
+    <a href="https://youtu.be/-Jj4s9I-53g"><br>Simon & Garfunkel - Scarborough Fair</a>
+</h4>
+
+</div>
+
 <script>
 function gjore(trykket) {
     trykket.innerHTML = 'X',
@@ -21,6 +34,8 @@ function gjore(trykket) {
    && document.getElementById('th').innerHTML=='X') {
     document.getElementById('all').style.display="block";
    }
+
+   
 }
 
 
